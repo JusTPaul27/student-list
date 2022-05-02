@@ -130,143 +130,75 @@ const studenti = [
   studente11,
 ];
 
-function writeStudentsDocument(studenti) {
-  const studentContainer = document.getElementById("student-container");
-
-  for (let i = 0; i < studenti.length; i++) {
-    const studente = studenti[i];
-
-    const p = document.createElement("p");
-
-    const nome = document.createTextNode(studente.nome);
-
-    const br = document.createElement("br");
-
-    p.appendChild(nome);
-
-    const cognome = document.createTextNode(' ' + studente.cognome + ';');
-
-    p.appendChild(cognome); 
-    
-    p.appendChild(br);
-
-    const genere = document.createTextNode('genere: ' + studente.genere + ';'); 
-
-    const br2 = document.createElement("br");
-
-    p.appendChild(genere); 
-
-    p.appendChild(br2);
-
-    const eta = document.createTextNode('età: ' + studente.eta + ';'); 
-
-    const br3 = document.createElement("br");
-
-    p.appendChild(eta); 
-
-    p.appendChild(br3); 
-
-    const città = document.createTextNode('città: ' + studente.citta + ';'); 
-
-    const br4 = document.createElement("br");
-
-    p.appendChild(città); 
-
-    p.appendChild(br4);
-
-    const sposato = document.createTextNode('sposato: ' + studente.sposato + ';'); 
-
-    const br5 = document.createElement("br");
-
-    p.appendChild(sposato); 
-
-    p.appendChild(br5); 
-
-    const corso = document.createTextNode('corso: ' + JSON.stringify(studente.corso.nome) + ';'); 
-
-    const br6 = document.createElement("br");
-
-    p.appendChild(corso); 
-
-    p.appendChild(br6);
-
-    studentContainer.appendChild(p); 
-
+  function writeStudentsDocument(studenti) {
+    const studentContainer = document.getElementById("student-container");
+  
+    for (let i = 0; i < studenti.length; i++) {
+      const studente = studenti[i];
+  
+      const p = document.createElement("p");
+  
+      const nome = document.createTextNode(studente.nome);
+  
+      const br = document.createElement("br");
+  
+      p.appendChild(nome);
+  
+      const cognome = document.createTextNode(' ' + studente.cognome + ';');
+  
+      p.appendChild(cognome); 
+      
+      p.appendChild(br);
+  
+      const genere = document.createTextNode('genere: ' + studente.genere + ';'); 
+  
+      const br2 = document.createElement("br");
+  
+      p.appendChild(genere); 
+  
+      p.appendChild(br2);
+  
+      const eta = document.createTextNode('età: ' + studente.eta + ';'); 
+  
+      const br3 = document.createElement("br");
+  
+      p.appendChild(eta); 
+  
+      p.appendChild(br3); 
+  
+      const città = document.createTextNode('città: ' + studente.citta + ';'); 
+  
+      const br4 = document.createElement("br");
+  
+      p.appendChild(città); 
+  
+      p.appendChild(br4);
+  
+      const sposato = document.createTextNode('sposato: ' + studente.sposato + ';'); 
+  
+      const br5 = document.createElement("br");
+  
+      p.appendChild(sposato); 
+  
+      p.appendChild(br5); 
+  
+      const corso = document.createTextNode('corso: ' + JSON.stringify(studente.corso.nome) + ';'); 
+  
+      const br6 = document.createElement("br");
+  
+      p.appendChild(corso); 
+  
+      p.appendChild(br6);
+  
+      studentContainer.appendChild(p); 
+  
+    }
   }
-}
-
-writeStudentsDocument(studenti);
+  
+  writeStudentsDocument(studenti);
+  
 
 // solo ragazze; 
-
-function writeFemaleDocument(studenti) {
-  const femaleContainer = document.getElementById("female-container"); 
-
-  // for (let i = 0; i < studenti.length; i++) { 
-  //   const studente = studenti[i]; 
-    
-  //   const p = document.createElement("p"); 
-
-  //   const nome = document.createTextNode(studente.nome);
-
-  //   const br = document.createElement("br");
-
-  //   p.appendChild(nome);
-
-  //   const cognome = document.createTextNode(' ' + studente.cognome + ';');
-
-  //   p.appendChild(cognome); 
-    
-  //   p.appendChild(br);
-
-  //   const genere = document.createTextNode('genere: ' + studente.genere + ';'); 
-
-  //   const br2 = document.createElement("br");
-
-  //   p.appendChild(genere); 
-
-  //   p.appendChild(br2);
-
-  //   const eta = document.createTextNode('età: ' + studente.eta + ';'); 
-
-  //   const br3 = document.createElement("br");
-
-  //   p.appendChild(eta); 
-
-  //   p.appendChild(br3); 
-
-  //   const città = document.createTextNode('città: ' + studente.citta + ';'); 
-
-  //   const br4 = document.createElement("br");
-
-  //   p.appendChild(città); 
-
-  //   p.appendChild(br4);
-
-  //   const sposato = document.createTextNode('sposato: ' + studente.sposato + ';'); 
-
-  //   const br5 = document.createElement("br");
-
-  //   p.appendChild(sposato); 
-
-  //   p.appendChild(br5); 
-
-  //   const corso = document.createTextNode('corso: ' + JSON.stringify(studente.corso.nome) + ';'); 
-
-  //   const br6 = document.createElement("br");
-
-  //   p.appendChild(corso); 
-
-  //   p.appendChild(br6);
-
-  //   femaleContainer.appendChild(p); 
-
-  // } 
-
-  const IsFemale = studenti.filter( => v.name === "Joe" && v.age < 30);
-}
-
-writeFemaleDocument(studenti);
 
 // solo ragazzi
 
